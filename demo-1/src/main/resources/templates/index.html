@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+	<script>
+		
+		function confirmdelete()
+		{
+			return confirm("Are you sure, to delete");
+		}
+	</script>
+		
+</head>
+<body>
+<div class="container my-2" align="center">
+	
+	
+<a href="addnewbook" class="btn btn-primary mr-3 mb-2">Add New Book</a>
+<table class="table table-bordered table-striped" style="width: 500px;">
+	
+	<tr th:each="b:${book}">
+		
+		<td th:text="${b.bookId}"></td>
+		<td th:text="${b.bookName}"></td>
+		<td th:text="${b.bookPrice}"></td>
+		<td><a th:href="@{/edit?(bookId=${b.bookId})}" class="btn btn-success">Edit</a></td>
+		<td><a th:href="@{/delete?(bookId=${b.bookId})}" class="btn btn-danger" onclick="return confirmdelete()">Delete</a></td>
+		
+	</tr>
+	<tr th:if="${book.isEmpty()}">
+		<td>No Recordss</td>
+	</tr>
+</table>
+
+</div>
+</body>
+</html>

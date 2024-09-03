@@ -1,0 +1,26 @@
+package com.example;
+
+public class Jproble {
+	
+	public static void main(String args[])
+	{
+		
+		
+		int[] i= {1,2,0,0};
+		
+		int arraytoInt=ArrayToInt(i);
+		
+		System.out.println(arraytoInt);
+		
+	}
+    static int ArrayToInt(int num[])
+    {
+    	int sum=0;
+    	for(int n:num)
+    	{
+    	  sum=sum*10+n;	
+    	}
+    	
+    	return sum;
+    }
+}

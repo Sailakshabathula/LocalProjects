@@ -1,0 +1,59 @@
+package countMatchingChar;
+
+public class FEDEX_GRD {
+	public static void main(String args[])
+	{
+		String basepackage="EP100000133";
+		String pakageOfferingId="EP100000037";
+		
+		try
+		{
+			
+		if(!pakageOfferingId.isEmpty())
+		{
+			System.out.println(pakageOfferingId);
+		}
+		else
+		{
+			if(basepackage.equals("EP100000133"))
+			{
+				System.out.println("Correct Packaging Id");
+			}
+			else
+			{
+				throw new MyException("Invalid Packaging Id");
+			}
+		}
+		
+		}
+		catch(MyException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
+		m1();
+	}
+	
+	
+
+	public static void m1()
+	{
+		
+		String rate_request="";
+		Rate_request rate=new Rate_request();
+		rate.setShipmentType("P");
+		if(rate.getShipmentType().equals("E"))
+		{
+			rate_request="ERL";
+			System.out.println("Email Return Label");
+		}
+		else if(rate.getShipmentType().equals("P"))
+		{
+			rate_request="PRL";
+			System.out.println("Print Return Label");
+		}
+		
+		
+	}
+
+}

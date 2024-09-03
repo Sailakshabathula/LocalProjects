@@ -1,0 +1,25 @@
+package countMatchingChar;
+
+ class FEDEX_GROUND {
+	public static void main(String args[])
+	{
+		String str="EP100000133";
+		
+		try
+		{
+			if(str.equals("EP100000133"))
+			{
+				System.out.println("Correct Packaging Id");
+			}
+			else
+			{
+				throw new MyException("Invalid Packaging Id");
+			}
+		}
+		catch(MyException e)
+		{
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

@@ -1,0 +1,59 @@
+package com.example.demo.Controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.Entity.User;
+import com.example.demo.Repo.UserRepo;
+import com.example.demo.Service.UserService;
+
+@RestController
+public class UserController {
+	
+	
+	@Autowired
+	private UserService ser;
+	
+	@Autowired
+	private UserRepo repo;
+	
+	@PostMapping("/userdatails")
+	public String userData(@RequestBody User user)
+	{
+	  String creatUser = ser.creatUser(user);
+	
+	return creatUser;
+	}
+	
+	@GetMapping("/allUser")
+	public List<User> getData()
+	{
+		List<User> findAll = repo.findAll();
+		return findAll;
+	}
+	
+	@GetMapping("/user/{id}")
+	public Optional<User> getUserData(@PathVariable Integer id)
+	{
+		Optional<User> findById = repo.findById(id);
+		
+		return findById;
+	}
+	
+	@GetMapping("/user/{name}")
+	public User getUserdata(@PathVariable String name)
+	{
+		User findByUsername = repo.findByUserName(name);
+		return findByUsername;
+	}
+	
+	
+
+}

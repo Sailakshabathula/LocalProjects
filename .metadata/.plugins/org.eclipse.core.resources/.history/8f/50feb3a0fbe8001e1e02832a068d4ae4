@@ -1,0 +1,9 @@
+package countMatchingChar;
+
+
+@FunctionalInterface
+public interface funInter {
+	
+	 int user(int a);
+
+}

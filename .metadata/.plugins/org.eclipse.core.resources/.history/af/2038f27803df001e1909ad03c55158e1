@@ -1,0 +1,26 @@
+package com.example.demo.Controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class GlobalExceptions {
+	
+	
+	
+	
+	@ExceptionHandler(value=ArithmeticException.class)
+	public ResponseEntity<String> handler(Exception e)
+	{
+		return new ResponseEntity<String>("anything is not divisible by 0",HttpStatus.BAD_REQUEST);
+	}
+	@ExceptionHandler(value=UserNotFound.class)
+	public ResponseEntity<String> handlers(Exception e)
+	{
+		System.out.println("welcome");
+		return new ResponseEntity<String>("welcome",HttpStatus.BAD_REQUEST);
+	}
+
+}

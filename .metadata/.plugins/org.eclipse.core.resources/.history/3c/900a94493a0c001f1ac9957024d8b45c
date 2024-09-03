@@ -1,0 +1,19 @@
+package Files;
+
+public class Singleton {
+	
+	//public static Singleton s=new Singleton();//Eaga Loading
+	public static Singleton s=null;
+	private Singleton()
+    {
+	    	
+	}
+	
+	
+	public static Singleton m1()
+	{
+      if(s==null)
+		    s=new Singleton();
+		return s;
+	}
+}

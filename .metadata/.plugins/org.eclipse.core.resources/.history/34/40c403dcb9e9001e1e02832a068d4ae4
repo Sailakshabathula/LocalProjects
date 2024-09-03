@@ -1,0 +1,25 @@
+package countMatchingChar;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class NewThings {
+
+	
+	public static void main(String args[])
+	{
+		Map<String,String> map=new HashMap<>();
+		
+       map.put("abc", "45670");
+       map.put("bcd", "7890");
+       map.put("ght", "56789");
+       Set<String> s=new HashSet<>();
+       s.add("abc");
+       s.add("bcd");
+       s.add("kl");
+       s.forEach(x->System.out.println(map.entrySet()));
+		
+	}
+}

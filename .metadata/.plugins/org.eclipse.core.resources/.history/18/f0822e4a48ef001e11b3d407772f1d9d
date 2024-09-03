@@ -1,0 +1,30 @@
+package Test;
+
+public class T {
+	
+	
+	
+	
+	public static void main(String args[])
+	{
+		
+		
+       int[] a=new int[10];
+       
+       
+       Student[] st=new Student[10];
+       
+       st[0]=new Student("abc","1234");
+       st[1]=new Student("bcd","3456");
+       for(int i=0;i<st.length;i++)
+       {
+    	   System.out.println(st[i]);
+       }
+       
+       
+       
+       
+
+}
+
+}

@@ -1,0 +1,25 @@
+package countMatchingChar;
+
+public class Pattern {
+	public static void main(String args[])
+	{
+		String str="EP10000013";
+		
+		try
+		{
+			if(str.equals("EP100000133"))
+			{
+				System.out.println("Correct Packaging Id");
+			}
+			else
+			{
+				throw new MyException("Invalid Packaging Id");
+			}
+		}
+		catch(MyException e)
+		{
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

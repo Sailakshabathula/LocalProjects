@@ -1,0 +1,12 @@
+package countMatchingChar;
+
+import org.junit.Test;
+
+public class TestProduct {
+
+	@Test
+	public void show()
+	{
+		
+	}
+}

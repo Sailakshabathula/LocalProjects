@@ -1,0 +1,26 @@
+package com.example.string;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class ReversetheWord {
+	
+	public static void main(String args[])
+	{
+		
+		//Write a programme reverse the each word .
+		
+		String st="this is javatpoint";
+		
+		   String[] split = st.split(" ");
+		
+		
+		String collect = Arrays.stream(st.split(" ")).map(i->new StringBuffer(i).reverse()).collect(Collectors.joining());
+		
+		String collect2 = IntStream.range(0, split.length).mapToObj(i->new StringBuffer(split[(split.length-1)-i]).reverse()).collect(Collectors.joining());
+	
+	System.out.println(collect2);
+	}
+
+}

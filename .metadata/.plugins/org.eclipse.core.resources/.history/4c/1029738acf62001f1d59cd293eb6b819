@@ -1,0 +1,42 @@
+package com.example.MethodOverloading;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class Exam {
+	
+	
+	public  static void main(String args[])
+	{
+	  
+		
+		
+List<Integer> li=Arrays.asList(1,5,10,9);
+
+
+Collections.sort(li,Collections.reverseOrder());
+System.out.println(li);
+
+List<Employee> eli=new ArrayList<>();
+
+eli.add(new Employee(45,35000,"abc"));
+eli.add(new Employee(34,67000,"dbc"));
+eli.add(new Employee(67,56000,"ukl"));
+
+
+Collections.sort(eli,new SortComparator());
+
+System.out.println(eli);
+
+                         
+Integer integer = li.stream().min((o1,o2)->o1.compareTo(o2)).get();
+
+
+System.out.println(integer);
+		
+		
+	}
+
+}

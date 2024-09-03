@@ -1,0 +1,7 @@
+package countMatchingChar;
+
+public interface LambdaTest {
+	
+	public void display();
+
+}

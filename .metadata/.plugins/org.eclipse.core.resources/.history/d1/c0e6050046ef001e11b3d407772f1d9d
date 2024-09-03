@@ -1,0 +1,28 @@
+package Test;
+
+public class T {
+	
+	public static void main(String args[])
+	{
+		
+		
+byte b1=10;
+
+int i=b1;
+
+short u=(short)i;
+
+char c='A';
+
+short k=(short)c;
+
+
+System.out.print(k);
+
+
+
+		
+		
+}
+
+}

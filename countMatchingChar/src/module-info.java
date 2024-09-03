@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module countMatchingChar {
+	requires junit;
+}

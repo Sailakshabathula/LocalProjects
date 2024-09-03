@@ -1,0 +1,60 @@
+package countMatchingChar;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pattern {
+	public static void main(String args[])
+	{
+		
+		
+		
+		
+		/*List<Integer> l=new ArrayList<Integer>();
+		l.add(20);
+		l.add(30);
+		l.add(40);
+		l.forEach((i)->System.out.println(i));
+		l.removeIf(p->p==20);
+		System.out.print(l);*/
+		
+		String haystack="sadbutsad";
+		String needle="sad";
+		
+		haystack = "leetcode"; needle = "leeto";
+		for(int i=0;i<haystack.length();i++)
+	       {
+	           if(haystack.substring(i,needle.length()+i).equals(needle))
+	           {
+	              System.out.println(i);
+	              break;
+	           }
+	           
+	       } 
+		
+		/*String basepackage="EP100000133";
+		String pakageOfferingId="EP100000037";
+		
+		try
+		{
+			
+		if(pakageOfferingId.isEmpty())
+		{
+			if(basepackage.equals("EP100000133"))
+			{
+				System.out.println("Correct Packaging Id");
+			}
+			else
+			{
+				throw new MyException("Invalid Packaging Id");
+			}
+		}
+		
+		}
+		catch(MyException e)
+		{
+			System.out.println(e.getMessage());
+		}*/
+	}
+
+}

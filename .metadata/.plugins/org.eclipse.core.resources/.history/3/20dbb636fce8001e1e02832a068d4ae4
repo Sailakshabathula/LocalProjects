@@ -1,0 +1,18 @@
+package countMatchingChar;
+
+public class interfaceimple  {
+
+	
+	
+	
+	public static void main(String args[])
+	{
+		
+		
+		funInter i=(int a)->a==10;
+		System.out.println(i.m1(10));
+		
+		
+	}
+
+}

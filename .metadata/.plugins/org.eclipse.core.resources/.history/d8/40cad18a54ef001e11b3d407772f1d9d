@@ -1,0 +1,15 @@
+package Test;
+
+public class Main {
+	
+	public static void main(String args[])
+	{
+		
+		
+		CustomThread ct=new CustomThread();
+		CustomThread ct1=new CustomThread();
+		ct.start();
+		ct1.start();
+	}
+
+}

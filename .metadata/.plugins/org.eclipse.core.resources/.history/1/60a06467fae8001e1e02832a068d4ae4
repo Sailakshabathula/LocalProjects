@@ -1,0 +1,17 @@
+package countMatchingChar;
+
+public class interfaceimple implements funInter {
+
+	public int user(int a) {
+		// TODO Auto-generated method stub
+		int i=10;
+		return a;
+	}
+	public static void main(String args[])
+	{
+		interfaceimple imp=new interfaceimple();
+		System.out.println(imp.user(10));
+		
+	}
+
+}

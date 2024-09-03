@@ -1,0 +1,33 @@
+package countMatchingChar;
+
+public class Emp implements Comparable<Emp>{
+
+	
+	private String name;
+	private String Id;
+	private String std;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getId() {
+		return Id;
+	}
+	public void setId(String id) {
+		Id = id;
+	}
+	public String getStd() {
+		return std;
+	}
+	public void setStd(String std) {
+		this.std = std;
+	}
+	@Override
+	public int compareTo(Emp o) {
+		
+		return this.getName().compareTo(o.getName());
+	}
+	
+}

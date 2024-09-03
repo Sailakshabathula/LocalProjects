@@ -1,0 +1,24 @@
+package Test;
+
+
+//thread
+//Runnable
+//callable
+
+
+
+
+public class CustomThread implements Runnable{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("welcome");
+	}
+	
+	
+	
+
+	
+
+}

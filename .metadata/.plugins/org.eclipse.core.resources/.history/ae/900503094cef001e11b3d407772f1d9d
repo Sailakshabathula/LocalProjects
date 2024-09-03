@@ -1,0 +1,40 @@
+package Test;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.*;
+
+public class T {
+	
+ public static void main(String args[])
+	{
+		
+	List<Integer> al=Arrays.asList(10,20,30,40,3,60);
+	
+	
+	//List<Integer> collect = al.stream().filter((p)->p%2!=0).collect(Collectors.toList());
+	 ArrayList<String> students = new ArrayList<String>(); 
+	  
+     // Add Strings to list 
+     // each string represents student name 
+     students.add("Ram"); 
+     students.add("Mohan"); 
+     students.add("Sohan"); 
+     students.add("Rabi"); 
+     students.add("Shabbir"); 
+	
+	students.removeIf((c)->c.startsWith("R"));
+	
+	System.out.println(students);
+	
+	/*for(Integer i:al) {
+		System.out.println(i);
+	}*/
+	
+	
+	
+	
+
+}
+
+}

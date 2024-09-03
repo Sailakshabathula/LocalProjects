@@ -1,0 +1,5 @@
+package countMatchingChar;
+
+public interface funInter {
+
+}

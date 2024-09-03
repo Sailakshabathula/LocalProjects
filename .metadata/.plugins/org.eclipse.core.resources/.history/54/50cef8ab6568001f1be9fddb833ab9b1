@@ -1,0 +1,21 @@
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+public class Server1Controller {
+	
+	
+	
+	
+	public String getDetails()
+	{
+		
+		RestTemplate rt=new RestTemplate();
+		
+		return rt.getForEntity("http://Server2/response",String.class).getBody();
+		
+	}
+
+}

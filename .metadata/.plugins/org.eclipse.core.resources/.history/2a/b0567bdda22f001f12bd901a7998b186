@@ -1,0 +1,33 @@
+package com.example.string;
+
+import java.util.stream.IntStream;
+import java.util.*;
+
+public class Startwith1Number {
+	
+	
+	public static void main(String args[])
+	{
+		
+		
+		List<Integer> li=Arrays.asList(10,20,11,15,16);
+		
+		li.stream().map(s->s+" ").filter(t->t.startsWith("1")).forEach(t->System.out.println(t));
+		
+		//Write a program to 2 list contains intersection
+		
+		int[] ar1= {1,2,3,3,4};
+		int[] ar2= {3,3};
+		
+ Arrays.stream(ar1).filter(t->Arrays.stream(ar2).anyMatch(y->y==t)).forEach(t->System.out.println(t));;
+		
+		//System.out.println(filter);
+ 
+ //Write the program find the second highest number
+ 
+ Integer integer = Arrays.stream(ar1).boxed().sorted(Collections.reverseOrder()).skip(1).findFirst().get();
+ 
+ System.out.println(integer);
+	}
+
+}

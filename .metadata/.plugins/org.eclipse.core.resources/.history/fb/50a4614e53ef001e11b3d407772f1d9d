@@ -1,0 +1,21 @@
+package Test;
+
+
+//thread
+//Runnable
+//callable
+
+
+
+
+public class CustomThread extends Thread{
+	
+	public void run()
+	{
+		System.out.println("welcome");
+	}
+	
+
+	
+
+}

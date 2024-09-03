@@ -1,0 +1,24 @@
+package com.example.string;
+
+import java.util.Arrays;
+
+public class YoutubeString {
+	
+	public static void main(String args[])
+	{
+		
+	//first occurance of character in a given string 
+		String s="This is a simple example is";
+		String s1="is";
+		
+		 long count = Arrays.stream(s.split(" ")).filter(t->t.equals(s1)).count();
+		 
+		 int indexOf = s.indexOf('i');
+		 
+		 System.out.println(indexOf);
+		
+      
+	
+	}
+
+}
